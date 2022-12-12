@@ -5,9 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>library</title>
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    
+    <div class="addBook">
+        <label for="title">
+            Title:
+            <input type="text" id="title" name="title">
+        </label>
+        <label for="author">
+            Author:
+            <input type="text" id="author" name="author">
+        </label>
+        <label for="pages">
+            Pages:
+            <input type="number" id="pages" name="pages">
+        </label>
+        <label for="read">
+            Read?
+            <input type="radio" id="read" name="read">
+        </label>
+        <button class="addBook">Add Book</button>
+    </div>
+    <div class="libraryDisplay">
+    </div>
 </body>
 </html>
