@@ -6,16 +6,9 @@ let libraryDisplay = document.getElementsByClassName('display')[0];
 
 let myLibrary = [hobbit, harryPotter, zaregoto];
 
-let addBut = document.querySelector("button");
-addBut.addEventListener("click", addBookToLibrary());
+let addBut = document.querySelector(".addBtn");
 
-function addBookToLibrary(){
-    const title = document.getElementById('title').value;
-    const author = document.getElementById('author').value;
-    const pages = document.getElementById('pages').value;
-    const newBook = Book(title, author, pages, false)
-    myLibrary.push(newBook);
-}
+// addBut.addEventListener("click", addBookToLibrary());
 
 function Book(title, author, pages, read){
     this.title = title;
@@ -24,22 +17,36 @@ function Book(title, author, pages, read){
     this.read = read;
 }
 
-for(let i = 0; i < myLibrary.length; i++){
-    let displayBook = document.createElement('div');
-    let bookTitle = document.createElement("p");
-    const bookTitleText = document.createTextNode(`Title: ${myLibrary[i].title}`);
-    bookTitle.appendChild(bookTitleText);
-    let bookAuthor = document.createElement("p");
-    const bookAuthorText = document.createTextNode(`Author: ${myLibrary[i].author}`);
-    bookAuthor.appendChild(bookAuthorText);
-    let bookPages = document.createElement("p");
-    const bookPagesText = document.createTextNode(`Pages: ${myLibrary[i].pages}`);
-    bookPages.appendChild(bookPagesText);
-    displayBook.appendChild(bookTitle);
-    displayBook.appendChild(bookAuthor);
-    displayBook.appendChild(bookPages);
-    displayBook.setAttribute("class", "displayBook");
-    libraryDisplay.appendChild(displayBook);
+function displayBook(){    
+    document.querySelector(".display").innerHTML = "";
+    let i = 0;
+    for(let books in myLibrary){
+        let book = document.createElement("tr");
+        const title = document.createElement("p");
+        const titleText = document.createTextNode(`Title: ${myLibrary[i].title}`);
+        const author = document.createElement("p");
+        const authorText = document.createTextNode(`Author: ${myLibrary[i].author}`);
+        const pages = document.createElement("p");
+        const pagesText = document.createTextNode(`Pages: ${myLibrary[i].pages}`);
+        const read = document.createElement("label");
+        const readLabel = document.createTextNode("Read?:");
+        read.appendChild(readLabel);
+        const readCheck = document.createElement("input");
+        readCheck.setAttribute("type", "checkbox");
+        read.appendChild(readCheck);
+        pages.appendChild(pagesText);
+        author.appendChild(authorText);
+        title.appendChild(titleText);
+        book.appendChild(title);
+        book.appendChild(author);
+        book.appendChild(pages);
+        book.appendChild(read);
+        i++;
+        libraryDisplay.appendChild(book);
+    }
+    
 }
 
-console.log(hobbit);
+displayBook();
+
+

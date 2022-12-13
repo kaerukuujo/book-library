@@ -15,6 +15,14 @@ button {
     border-radius: 15px;
 }
 
+button:active {
+    background-color: rgba(53, 182, 81, 0.815);
+}
+tr {
+    border: 1px solid red;
+    padding: 10px;
+}
+
 .display {
     border: 1px solid red;
     display: flex;
