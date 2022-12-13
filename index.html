@@ -7,23 +7,24 @@
     <title>library</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
+    
 </head>
 <body>
-   <section class="addBook">
-    <div class="inputBox">
-        <label for="title">Title:</label>
-        <input type="text" name="title" id="title">
-    </div>
-    <div class="inputBox">
-        <label for="author">Author:</label>
-        <input type="text" name="author" id="author">
-    </div>
-    <div class="inputBox">
-        <label for="pages">Pages:</label>
-        <input type="number" name="pages" id="pages">
-    </div>
-    <button class="addBtn">Add Book</button>
-   </section>
+   <form action="">
+    <button type="button" id="submitButton">Add Book</button>
+    <label for="title">
+        Title:
+        <input type="text" id="title" name="title">
+    </label>
+    <label for="author">
+        Author:
+        <input type="text" id="author" name="author">
+    </label>
+    <label for="pages">
+        Pages:
+        <input type="number" id="pages" name="pages">
+    </label>
+   </form>
    <section>
     <table class="display">
         
