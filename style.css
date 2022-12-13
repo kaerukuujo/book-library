@@ -1,0 +1,35 @@
+.addBook {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.inputBox {
+    padding: 10px;
+}
+
+button {
+    margin: 10px;
+    min-width: 200px;
+    height: 50px;
+    border-radius: 15px;
+}
+
+.display {
+    border: 1px solid red;
+    display: flex;
+    justify-content: space-around;
+}
+
+.newBook {
+    border: 1px solid red;
+    display: flex;
+    flex-wrap: wrap;
+    width: 200px;
+    height: 300px;
+}
+
+.displayBook {
+    border: 1px solid red;
+    padding: 15px;
+}
